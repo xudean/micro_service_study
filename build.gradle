@@ -15,5 +15,11 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    //数据库连接使用druid连接池
+    compile('org.springframework.boot:spring-boot-starter-data-jpa'){
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+    compile group: 'com.alibaba', name: 'druid', version: '1.0.29'
+    compile('mysql:mysql-connector-java:5.1.31')
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
