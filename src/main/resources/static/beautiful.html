@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-Table</title>
+    <link rel="stylesheet" href="src/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap.css"/>
+    <script src="src/js/bootstrap.js"></script>
+</head>
+<body>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.username}">海</td>
+        <td th:text="${user.age}">18</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

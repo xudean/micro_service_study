@@ -3,3 +3,17 @@ server:
   logging:
     config: classpath:logback-spring.xml
     path: logs/
+spring:
+  # 模板配置
+  thymeleaf:
+    cache: false # 这个开发配置为false，避免改了模板还要重启服务器
+    prefix: classpath:/static/
+    suffix: .html              # 下面3个不做解释了，可以不配置
+    encoding: UTF-8
+    mode: LEGACYHTML5      # 模板的模式
+  mvc:
+    view:
+      prefix: classpath:/   # 定位模板的目录
+      suffix: .html     # 给返回的页面添加后缀名
+  resources:
+    static-locations: classpath:/static/src/

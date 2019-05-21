@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<body>
+<!--基本数据显示-->
+<a th:text="${name}"></a>
+<hr>
+<!--字符串拼接-->
+<p th:text="'Hello！, ' + ${name} + '!'">3333</p>
+<hr>
+<!--选择变量表达式-->
+<div th:object="${session.user}">
+    <p>Name: <span th:text="*{id}">Sebastian</span>.</p>
+    <p>Surname: <span th:text="*{username}">Pepper</span>.</p>
+    <p>Nationality: <span th:text="*{age}">Saturn</span>.</p>
+</div>
+等价于
+<div>
+    <p>Name: <span th:text="${session.user.id}">Sebastian</span>.</p>
+    <p>Surname: <span th:text="${session.user.username}">Pepper</span>.</p>
+    <p>Nationality: <span th:text="${session.user.age}">Saturn</span>.</p>
+</div>
+<hr>
+<!--链接表达式-->
+<a th:href="@{http://localhost:8880/detail/(id=${session.user.id})}">发送用户ID</a>
+
+<a th:href="@{/detail/(id=${session.user.id})}">简写</a>
+
+<hr>
+<!--if-->
+<!--name为空时就是false，unless时不满足时显示-->
+<a th:href="@{/detail?id=1}" th:unless=${name}>Login</a>
+<!--name为空时就是false，if是满足时显示-->
+<a th:href="@{/detail?id=1}" th:if=${name}>Login</a>
+<hr>
+<!--循环-->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>AGE</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.username}">海</td>
+        <td th:text="${user.age}">18</td>
+    </tr>
+</table>
+<hr>
+</body>
+</html>
