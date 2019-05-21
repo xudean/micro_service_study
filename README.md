@@ -4,4 +4,4 @@
 ## SpringBoot基础
 - feature-SpringBoot集成Thymeleaf
   - 分支：feature-SpringBoot集成Thymeleaf
-  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90Thymeleaf
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90Thymeleaf 
