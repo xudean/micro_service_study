@@ -8,9 +8,11 @@
 - 集成Spring Data JPA
   - 分支：feature-springboot+SpringDataJpa
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-springboot+SpringDataJpa
+  - 分支：feature-springboot+SpringDataJpa(高级特性)
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-springboot+SpringDataJpa(%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7) 
 - 集成Mybatis
   - 分支：feature-SpringBoot集成mybatis
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90mybatis
 - feature-SpringBoot集成Thymeleaf
   - 分支：feature-SpringBoot集成Thymeleaf
-  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90Thymeleaf 
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90Thymeleaf
