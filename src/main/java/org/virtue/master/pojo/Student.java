@@ -1,4 +1,4 @@
-package org.virtue.pojo;
+package org.virtue.master.pojo;
 
 import javax.persistence.*;
 

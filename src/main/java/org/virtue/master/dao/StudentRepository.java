@@ -1,8 +1,9 @@
-package org.virtue.dao;
+package org.virtue.master.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import org.virtue.pojo.Student;
+import org.virtue.master.pojo.Student;
+
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
 }
