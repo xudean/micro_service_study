@@ -3,6 +3,7 @@ package org.virtue.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.virtue.basic.result.BizResult;
@@ -79,6 +80,27 @@ public class StudentController {
     @RequestMapping(value = "/students/age/{age}", method = {RequestMethod.GET})
     public List<Student> queryStudentByAge(@PathVariable int age){
         List<Student> students = studentRepository.findStudentByAge(age);
+        return students;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/students/query", method = {RequestMethod.GET})
+    public List<Student> quertSimple( String studentname){
+        List<Student> students = studentRepository.findByStudentName(studentname);
+        return students;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/students/endwith", method = {RequestMethod.GET})
+    public List<Student> quertSimpleEndWith(String endname){
+        List<Student> students = studentRepository.findByStudentNameEndsWith(endname);
+        return students;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/students/sort", method = {RequestMethod.GET})
+    public List<Student> testSort(String studentName){
+        List<Student> students = studentRepository.findByStudentNameEndsWithAndSort(studentName, new Sort("age"));
         return students;
     }
 }
