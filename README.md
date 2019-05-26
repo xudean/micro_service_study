@@ -17,5 +17,5 @@
   - 分支：feature-SpringBoot集成Thymeleaf
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90Thymeleaf
 - feature-SpringBoot集成SpringDataJPA实现多数据源
-  - 分支：-SpringBoot集成SpringDataJPA实现多数据源
+  - 分支：feature-SpringBoot集成SpringDataJPA实现多数据源
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90SpringDataJPA%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90
