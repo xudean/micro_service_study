@@ -19,6 +19,9 @@
 - feature-SpringBoot集成SpringDataJPA实现多数据源
   - 分支：feature-SpringBoot集成SpringDataJPA实现多数据源
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90SpringDataJPA%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90
+- feature-springboot集成定时任务
+  - 分支：feature-springboot集成定时任务
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringBoot%E9%9B%86%E6%88%90%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%EF%BC%8C%E6%95%B4%E5%90%88Scheduled%EF%BC%88%E4%B8%80%EF%BC%89
 - feature-SpringBoot集成JavaMail
   - 分支：feature-SpringBoot集成JavaMail
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-springboot%E9%9B%86%E6%88%90JavaMail
