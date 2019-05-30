@@ -15,5 +15,8 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    compile (group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '1.5.9.RELEASE'){
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

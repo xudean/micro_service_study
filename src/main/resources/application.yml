@@ -1,2 +1,12 @@
 server:
   port: 8880
+spring:
+  mail:
+    host: smtp.163.com
+    username: xda265856@163.com
+    password: xda265856
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 25000
