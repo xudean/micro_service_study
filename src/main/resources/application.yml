@@ -3,8 +3,8 @@ server:
 spring:
   mail:
     host: smtp.163.com
-    username: xda265856@163.com
-    password: xda265856
+    username: 自行修改@163.com
+    password: 自行修改
     properties:
       mail:
         smtp:
