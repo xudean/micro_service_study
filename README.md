@@ -25,3 +25,7 @@
 - feature-SpringBoot集成JavaMail
   - 分支：feature-SpringBoot集成JavaMail
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-springboot%E9%9B%86%E6%88%90JavaMail
+## 微服务组件学习
+- feature-一个简单的微服务
+  - 分支：feature-一个简单的微服务
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E6%9C%8D%E5%8A%A1
