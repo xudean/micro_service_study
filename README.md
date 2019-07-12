@@ -1,3 +1,3 @@
 # 微服务学习
 ## SpringBoot基础
-- 集成Spring Data JPA
+- 实现一个简单的微服务

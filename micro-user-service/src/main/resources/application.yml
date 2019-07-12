@@ -1,9 +1,9 @@
 server:
-  port: 8880
+  port: 8881
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/microservice?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://127.0.0.1:3306/micro_user?useUnicode=true&characterEncoding=utf-8&useSSL=true
     username : root
     password : xda265856
     driverClassName : com.mysql.jdbc.Driver
