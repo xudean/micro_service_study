@@ -29,3 +29,6 @@
 - feature-一个简单的微服务
   - 分支：feature-一个简单的微服务
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%BE%AE%E6%9C%8D%E5%8A%A1
+- feature-Eureka服务注册与发现
+  - 分支：feature-Eureka服务注册与发现
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-Eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0
