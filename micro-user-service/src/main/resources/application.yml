@@ -1,6 +1,8 @@
 server:
   port: 8881
 spring:
+  application:
+    name: micro-user-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://127.0.0.1:3306/micro_user?useUnicode=true&characterEncoding=utf-8&useSSL=true
@@ -13,3 +15,9 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
     show-sql: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true
