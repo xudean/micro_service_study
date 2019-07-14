@@ -32,3 +32,6 @@
 - feature-Eureka服务注册与发现
   - 分支：feature-Eureka服务注册与发现
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-Eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0
+- feature-使用Ribbon实现客户端侧负载均衡
+  - 分支：feature-使用Ribbon实现客户端侧负载均衡
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Ribbon%E5%AE%9E%E7%8E%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BE%A7%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1
