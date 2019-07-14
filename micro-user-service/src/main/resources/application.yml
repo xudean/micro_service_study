@@ -17,7 +17,9 @@ spring:
     show-sql: true
 eureka:
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
-      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+      defaultZone: http://root:root123@localhost:8761/eureka/,http://root:root123@localhost:8762/eureka/
   instance:
     prefer-ip-address: true

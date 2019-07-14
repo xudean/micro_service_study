@@ -4,6 +4,10 @@ spring:
 ---
 spring:
   profiles: peer1
+  security:
+    user:
+      name: root
+      password: root123
 server:
   port: 8761
 eureka:
@@ -11,11 +15,17 @@ eureka:
     hostname: peer1
   client:
     serviceUrl:
-      defaultZone: http://peer2:8762/eureka/
+      defaultZone: http://root:root123@peer2:8762/eureka/
+
+
 
 ---
 spring:
   profiles: peer2
+  security:
+    user:
+      name: root
+      password: root123
 server:
   port: 8762
 eureka:
@@ -23,4 +33,4 @@ eureka:
     hostname: peer2
   client:
     serviceUrl:
-      defaultZone: http://peer1:8761/eureka/
+      defaultZone: http://root:root123@peer1:8761/eureka/

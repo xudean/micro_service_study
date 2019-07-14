@@ -23,6 +23,6 @@ dependencies {
     compile('mysql:mysql-connector-java:5.1.31')
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
-
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
