@@ -1,6 +1,11 @@
 package org.virtue.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,17 +18,29 @@ import java.util.List;
 
 @Controller
 public class MovieController {
+    private static final Logger logger = LoggerFactory.getLogger(MovieController.class);
 
     @Bean
+    @LoadBalanced
     RestTemplate loadBalancedRestTemplate() {
         return new RestTemplate();
     }
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
+
     @ResponseBody
     @RequestMapping(value = "/movie/users", method = {RequestMethod.GET})
     public List<ServiceUser> listUsers(){
-       return this.restTemplate.getForObject("http://127.0.0.1:8881/users",List.class);
+       return this.restTemplate.getForObject("http://micro-user-service/users",List.class);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/log-instalce", method = {RequestMethod.GET})
+    public void logUserInstance(){
+        ServiceInstance serviceInstance = this.loadBalancerClient.choose("micro-user-service");
+        logger.info("{}:{}:{}",serviceInstance.getServiceId(),serviceInstance.getHost(),serviceInstance.getPort());
     }
 }
