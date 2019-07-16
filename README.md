@@ -35,3 +35,6 @@
 - feature-使用Ribbon实现客户端侧负载均衡
   - 分支：feature-使用Ribbon实现客户端侧负载均衡
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Ribbon%E5%AE%9E%E7%8E%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BE%A7%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1
+- feature-使用Feign实现声明式REST调用
+  - 分支：feature-使用Feign实现声明式REST调用
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Feign%E5%AE%9E%E7%8E%B0%E5%A3%B0%E6%98%8E%E5%BC%8FREST%E8%B0%83%E7%94%A8
