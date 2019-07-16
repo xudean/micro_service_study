@@ -19,4 +19,11 @@ public class UserController {
         List<ServiceUser> students = userRepository.findAll();
         return students;
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/users/{userId}", method = {RequestMethod.GET})
+    public ServiceUser selectUserById(@PathVariable Long userId){
+        ServiceUser serviceUser = userRepository.findById(userId).get();
+        return serviceUser;
+    }
 }
