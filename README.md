@@ -38,3 +38,6 @@
 - feature-使用Feign实现声明式REST调用
   - 分支：feature-使用Feign实现声明式REST调用
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Feign%E5%AE%9E%E7%8E%B0%E5%A3%B0%E6%98%8E%E5%BC%8FREST%E8%B0%83%E7%94%A8
+- feature-使用Hystrix实现微服务的容错处理 
+  - 分支：feature-使用Hystrix实现微服务的容错处理 
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Hystrix%E5%AE%9E%E7%8E%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%AE%B9%E9%94%99%E5%A4%84%E7%90%86
