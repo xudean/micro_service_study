@@ -1,3 +1,3 @@
 # 微服务学习
 ## SpringBoot基础
-- 使用Feigns实现声明式REST调用
+- 使用Hystrix实现微服务的容错处理
