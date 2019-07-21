@@ -21,18 +21,12 @@ eureka:
       defaultZone: http://root:root123@localhost:8761/eureka/,http://root:root123@localhost:8762/eureka/
   instance:
     prefer-ip-address: true
-feign:
-  compression:
-    # 启用请求和响应的压缩
-    request:
-      enabled: true
-      #用于支持的媒体类型列表，默认是text/xml,application/xml,application/json
-      mime-types: text/xml,application/xml,application/json
-      #请求的最小阈值，默认2048
-      min-request-size: 2048
-    response:
-      enabled: true
 logging:
   level:
     # 因为Feign只会对DEBUG级别的日志做出响应
     org.virtue.feign.UserFeignClient: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

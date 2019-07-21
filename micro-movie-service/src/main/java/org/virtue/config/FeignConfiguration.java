@@ -11,14 +11,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class FeignConfiguration {
-    /**
-     * 将契约修改为Feign的默认契约。这样可以使用Feign自带的注解
-     * @return 默认的Feign契约
-     */
-    @Bean
-    public Contract feignContract(){
-        return new feign.Contract.Default();
-    }
+
     @Bean
     Logger.Level feignLoggerLevel(){
         return Logger.Level.FULL;

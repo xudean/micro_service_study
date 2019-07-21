@@ -1,5 +1,6 @@
 package org.virtue.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
+import org.virtue.basic.result.BizResult;
 import org.virtue.feign.UserFeignClient;
 import org.virtue.pojo.ServiceUser;
 
@@ -51,9 +53,21 @@ public class MovieController {
     }
 
     @ResponseBody
+    @HystrixCommand(fallbackMethod = "getUserFallBackByUserId")
     @RequestMapping(value = "/movie/{id}", method = {RequestMethod.GET})
-    public ServiceUser getUserByUserId(@PathVariable Long id){
-        return userFeignClient.findById(id);
+    public BizResult getUserByUserId(@PathVariable Long id){
+        ServiceUser user = userFeignClient.findById(id);
+        BizResult bizResult = BizResult.success();
+        bizResult.setMessage("查询成功");
+        bizResult.setData(user);
+        return bizResult;
+    }
+
+    public BizResult getUserFallBackByUserId(Long id){
+        BizResult bizResult = new BizResult();
+        bizResult.setMessage(String.format("获取id为%d的用户失败",id));
+        bizResult.setRetCode(-1);
+        return bizResult;
     }
 
 }
