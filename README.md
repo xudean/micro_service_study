@@ -41,3 +41,6 @@
 - feature-使用Hystrix实现微服务的容错处理 
   - 分支：feature-使用Hystrix实现微服务的容错处理 
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Hystrix%E5%AE%9E%E7%8E%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%AE%B9%E9%94%99%E5%A4%84%E7%90%86
+- feature-使用Turbine实现聚合数据监控
+  - 分支：feature-使用Turbine实现聚合数据监控
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Turbine%E5%AE%9E%E7%8E%B0%E8%81%9A%E5%90%88%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7
