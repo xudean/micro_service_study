@@ -1,8 +1,8 @@
 server:
-  port: 8870
+  port: 8871
 spring:
   application:
-    name: micro-movie-service
+    name: micro-movie-service2
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://127.0.0.1:3306/micro_movie?useUnicode=true&characterEncoding=utf-8&useSSL=true
@@ -15,6 +15,8 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
     show-sql: true
+  main:
+    allow-bean-definition-overriding: true
 eureka:
   client:
     serviceUrl:

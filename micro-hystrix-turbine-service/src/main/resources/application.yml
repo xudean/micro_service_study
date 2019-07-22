@@ -1,11 +1,11 @@
 server:
-  port: 8870
+  port: 8860
 spring:
   application:
-    name: micro-movie-service
+    name: micro-hystrix-turbine-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/micro_movie?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://127.0.0.1:3306/micro_user?useUnicode=true&characterEncoding=utf-8&useSSL=true
     username : root
     password : xda265856
     driverClassName : com.mysql.jdbc.Driver
@@ -17,16 +17,13 @@ spring:
     show-sql: true
 eureka:
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://root:root123@localhost:8761/eureka/,http://root:root123@localhost:8762/eureka/
   instance:
     prefer-ip-address: true
-logging:
-  level:
-    # 因为Feign只会对DEBUG级别的日志做出响应
-    org.virtue.feign.UserFeignClient: DEBUG
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
+turbine:
+  app-config: micro-movie-service2,micro-movie-service
+  cluster-name-expression: "'default'"
