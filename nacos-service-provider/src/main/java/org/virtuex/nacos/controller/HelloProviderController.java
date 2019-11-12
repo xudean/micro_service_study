@@ -7,19 +7,16 @@ package org.virtuex.nacos.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.virtuex.nacos.service.impl.HelloProviderServiceImpl;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.skywalking.apm.toolkit.trace.ActiveSpan;
-import org.apache.skywalking.apm.toolkit.trace.Trace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.virtuex.nacos.service.impl.HelloProviderServiceImpl;
 
 /**
- * @author: xuda.it@outlook.com
- * @date: 2019年11月10日
- * @Description:
+ * @author: chenx
+ * @date: 2019年10月17日
+ * @Description: TODO(用一句话描述该文件做什么)
  */
 @RestController
 public class HelloProviderController {
@@ -27,11 +24,14 @@ public class HelloProviderController {
     @Autowired
     HelloProviderServiceImpl helloServiceProviderService;
 
-    @GetMapping("/sayHi")
-    //对任何需要追踪的方法，使用 @Trace 标注，则此方法会被加入到追踪链中。
-    @Trace()
-    public String sayHi() {
-        LOGGER.info("调用服务提供者");
-        return helloServiceProviderService.sayHi();
+    @GetMapping("/sayHi/{user}")
+    public String sayHi(@PathVariable("user") String user) {
+        LOGGER.info("Ribbon load balance!");
+        return helloServiceProviderService.sayHi(user);
+    }
+
+    @GetMapping("/sayHiError/{user}")
+    public String sayHiError(@PathVariable("user") String user) {
+      throw new RuntimeException("模拟服务调用失败");
     }
 }

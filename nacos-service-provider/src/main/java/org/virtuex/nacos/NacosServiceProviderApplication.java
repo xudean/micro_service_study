@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * @author: xuda.it@outlook.com
- * @date: 2019年11月10日
- * @Description:
+ * @author: chenx
+ * @date: 2019年10月17日
+ * @Description: TODO(用一句话描述该文件做什么)
  */
 @SpringBootApplication
 @EnableDiscoveryClient

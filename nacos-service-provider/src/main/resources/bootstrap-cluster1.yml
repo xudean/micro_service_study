@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
     name: nacos-provider-demo-xuda
-  cloud: 
-    nacos: 
-      config: 
+  cloud:
+    nacos:
+      config:
         server-addr: 192.168.23.100:8848
         file-extension: yaml
         enabled: true
