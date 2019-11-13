@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author: chenx
+ * @author:
  * @date: 2019年10月17日
  * @Description: TODO(用一句话描述该文件做什么)
  */
