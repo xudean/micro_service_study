@@ -25,6 +25,9 @@
 - feature-SpringBoot集成JavaMail
   - 分支：feature-SpringBoot集成JavaMail
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-springboot%E9%9B%86%E6%88%90JavaMail
+- feature-Springboot%2BSwagger2
+  - 分支：feature-Springboot 2BSwagger2
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-Springboot%2BSwagger2
 ## 微服务组件学习
 - feature-一个简单的微服务
   - 分支：feature-一个简单的微服务
@@ -44,7 +47,7 @@
 - feature-使用Turbine实现聚合数据监控
   - 分支：feature-使用Turbine实现聚合数据监控
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-%E4%BD%BF%E7%94%A8Turbine%E5%AE%9E%E7%8E%B0%E8%81%9A%E5%90%88%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7
-  
+ 
 ## Spring Cloud Alibaba组件
 - feature-nacos_provider_consumer
   - 分支：feature-nacos_provider_consumer
