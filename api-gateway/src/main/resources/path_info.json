@@ -1,0 +1,17 @@
+[
+  {
+    "path_id": 1,
+    "http_method": "POST",
+    "path": "/admins"
+  },
+  {
+    "path_id": 2,
+    "http_method": "GET",
+    "path": "/admins/{id}"
+  },
+  {
+    "path_id": 3,
+    "http_method": "GET",
+    "path": "/admins/{id}}/cert"
+  }
+]

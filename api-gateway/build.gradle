@@ -1,0 +1,67 @@
+import java.text.SimpleDateFormat
+
+buildscript {
+    ext {
+        springBootVersion = '2.1.9.RELEASE'
+        springCloudAlibabaVersion = '2.1.0.RELEASE'
+        lombokVersion="1.18.2"
+    }
+    repositories {
+        maven { url 'http://repo.spring.io/libs-milestone' }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:1.0.8.RELEASE")
+        classpath("com.bmuschko:gradle-cargo-plugin:2.6.1")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+compileJava.dependsOn(processResources)
+
+repositories {
+    maven { url 'http://repo.spring.io/libs-milestone' }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Greenwich.SR2'
+    }
+}
+
+dependencies {
+
+    //Spring Cloud Alibaba 基础框架
+    //服务注册与发现
+    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:${springCloudAlibabaVersion}"
+    //分布式配置中心
+    implementation "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:${springCloudAlibabaVersion}"
+
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-gateway'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis-reactive'
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-logging'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools'
+    //添加JWT的依赖
+    compile'io.jsonwebtoken:jjwt:0.9.1'
+
+    //lombok插件，这里采用官方推荐的方式，防止gradle build时找不到lombok
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+
+    //配置提示
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    testCompile group: 'junit', name: 'junit'
+}

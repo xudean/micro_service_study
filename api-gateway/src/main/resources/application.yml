@@ -1,0 +1,18 @@
+server:
+  port: 8900
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+license:
+  secure:
+    skip-url:
+      - get
+      - set
+      - getall

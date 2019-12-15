@@ -7,7 +7,7 @@ spring:
         server-addr: 192.168.23.100:8848
 
 server:
-  port: 8900
+  port: 8800
 
 logging:
   config: classpath:logback.xml
