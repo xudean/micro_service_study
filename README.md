@@ -55,3 +55,6 @@
 - Nacos+Feign+Ribbon声明式Rest调用及客户端侧负载均衡
   - 分支：feature-nacos_provider_consumer
   - 链接：https://github.com/virtuex/micro_service_study/tree/feature-nacos_provider_consumer
+- Spring Cloud Gateway构建微服务网关
+  - 分支：feature-SpringCloud_gateway
+  - 链接：https://github.com/virtuex/micro_service_study/tree/feature-SpringCloud_gateway
