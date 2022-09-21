@@ -1,0 +1,29 @@
+server:
+  port: 8860
+spring:
+  application:
+    name: micro-hystrix-turbine-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/micro_user?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username : root
+    password : xda265856
+    driverClassName : com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+    show-sql: true
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://root:root123@localhost:8761/eureka/,http://root:root123@localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
+turbine:
+  app-config: micro-movie-service2,micro-movie-service
+  cluster-name-expression: "'default'"

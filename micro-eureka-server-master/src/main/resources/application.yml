@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: micro-eureka-server
+---
+spring:
+  profiles: peer1
+  security:
+    user:
+      name: root
+      password: root123
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://root:root123@peer2:8762/eureka/
+
+
+
+---
+spring:
+  profiles: peer2
+  security:
+    user:
+      name: root
+      password: root123
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://root:root123@peer1:8761/eureka/
